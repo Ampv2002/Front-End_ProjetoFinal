@@ -69,11 +69,13 @@ export default ({
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
 
 body .wrapper{
-  background-color: #76b852 !important; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  /*background-color: #76b852 !important; /* fallback for old browsers */
+  background-image: url('../assets/bkg1.jpg') ;
+  background-position-y: -200px;
+  /* background: -webkit-linear-gradient(right, #76b852, #8DC26F);
   background: -moz-linear-gradient(right, #76b852, #8DC26F);
   background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F); */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;   

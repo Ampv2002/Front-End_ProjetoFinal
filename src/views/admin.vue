@@ -2,28 +2,40 @@
 
 <div class="container">
     
-    <form @submit.prevent="submeterfilme" class="form">
-    <h2>Adicionar Filme</h2>
+    <form @submit.prevent="submeterlivro" class="form">
+    <h2>Adicionar Livro</h2>
     <br>
         <div class="input-control">
             <label>Title</label>
-            <input type="text" v-model="novoFilme.Title" >
+            <input type="text" v-model="novoLivro.Titulo" >
         </div>
         <div class="input-control">
             <label>Year</label>
-            <input type="text" v-model="novoFilme.Year" >
+            <input type="text" v-model="novoLivro.Ano" >
         </div>
         <div class="input-control">
-            <label>Type</label>
-            <input type="text" v-model="novoFilme.Type">
+            <label>Genres</label>
+            <input type="text" v-model="novoLivro.Genres">
         </div>
          <div class="input-control">
-            <label>Poster</label>
-            <input type="text" v-model="novoFilme.Poster">
+            <label>Cover</label>
+            <input type="text" v-model="novoLivro.Capa">
         </div>
         <div class="input-control">
-            <label>imdbID</label>
-            <input type="text" v-model="novoFilme.imdbID">
+            <label>Goodreads</label>
+            <input type="text" v-model="novoLivro.Goodreads">
+        </div>
+        <div class="input-control">
+            <label>Price</label>
+            <input type="text" v-model="novoLivro.Preco">
+        </div>
+        <div class="input-control">
+            <label>Author</label>
+            <input type="text" v-model="novoLivro.Author">
+        </div>
+        <div class="input-control">
+            <label>Synopsis</label>
+            <input type="text" v-model="novoLivro.Synopsis">
         </div>
         <br>
         <button  v-on:click="submitBut" type="submit" class="button">Enviar</button>
@@ -35,19 +47,22 @@ import axios from 'axios';
 export default {
     data (){
         return {
-            novoFilme:{
-                Title: '',
-                Year: '',
-                Type: '',
-                Poster: '',
-                imdbID: ''
+            novoLivro:{
+                Titulo: '',
+                Ano: '',
+                Genres: '',
+                Capa: '',
+                Goodreads: '',
+                Preco: '',
+                Author: '',
+                Synopsis: ''
 
             }
         }
     },
     methods:{
-       submeterfilme(){
-           return axios.post('https://projeto-frontend-default-rtdb.europe-west1.firebasedatabase.app/Search.json', this.novoFilme);
+       submeterlivro(){
+           return axios.post('https://projeto-f2622-default-rtdb.europe-west1.firebasedatabase.app/livro.json', this.novoLivro);
        },
        submitBut: () => {
                 alert('Filme introduzido com sucesso!')

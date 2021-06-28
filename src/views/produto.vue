@@ -1,11 +1,7 @@
 <template>
 <div>
   <v-container>
-      <input type="text" v-model="pesquisa" v-on:keyup.enter="procura(pesquisa)"> 
-          <v-btn color="#29B6F6" :loading="loading1" @click="procura(pesquisa)">Search</v-btn>
-          <hr/>
         <div class="row">
-         
         <!-- Lista favoritos -->
         <v-snackbar
       v-model="snackbar"
@@ -28,9 +24,9 @@
             <div class="colunaFav">
 
                 <div v-if="favoritos.length >0">
-                  <h3>Favoritos</h3>
+                  <h3><b>Favoritos</b></h3>
                   <div v-for="(fav, index) in favoritos" :key="index">
-                      {{fav.Title}} <v-icon x-small @click="removeFav(index)">mdi-close-circle-outline</v-icon>
+                      {{fav.Titulo}} <v-icon x-small @click="removeFav(index)">mdi-close-circle-outline</v-icon>
                   </div>
                 </div>
 
@@ -71,8 +67,8 @@
                       <p class="movie-actors">{{item.Author}}</p>
                     </div>
                   </div>
-                    <div class="col2"><div class="watch-btn"><h3> GOODREADS </h3></div></div>
-                    <div class="col6 action-btn"><i class="fas fa-bookmark"></i></div>
+                    <div class="col2"><button @click='btnClick(item.Goodreads)' target="_blank" ><div class="watch-btn"><h3> GOODREADS </h3></div></button></div>
+                    <div class="col2"><div class="favorite-button"><v-btn @click="favorito(item)">Favorito</v-btn></div></div>
                 </div>
               </div>
           </div>
@@ -107,7 +103,7 @@ $dark-color: #1e1b26;
 }
 .cellphone-container{  
   width:375px;
-  height:650px;
+  height:700px;
   background-color:#1e1b26;
   margin : 60px auto 0 auto;
   
@@ -176,6 +172,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   }  
 }
 
+.favorite-button{
+  display:block;
+  border-radius:5px;
+  padding:4px;
+  width: 140px;
+  position: absolute;
+  right:   -21px;
+  bottom:  -38px;
+  float: left
+}
+
 .watch-btn {
   h3{
     i{
@@ -191,6 +198,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   border-radius:5px;
   padding:4px;
   width:140px;
+  position: absolute;
+  left:    10px;
+  bottom:  -33px;
+  float: left
 }
 
 .action-row{
@@ -224,6 +235,11 @@ h1,h2,h3,h4,h5 {
   font-family:$heading-font-family;
   color:$accent-color;
   margin:0px;
+  word-break: break-word;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 h1 {

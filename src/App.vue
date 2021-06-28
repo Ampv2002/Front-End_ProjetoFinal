@@ -10,7 +10,7 @@
         
       </v-toolbar-title>
         
-      <v-spacer  class="titulo"> <v-btn elevation="0"  href="/produto"><h1>Movie Api</h1></v-btn> </v-spacer>
+      <v-spacer  class="titulo text-center center"> <v-btn elevation="0"  href="/produto"><h1>Book Api</h1></v-btn> </v-spacer>
 
       <v-btn elevation="0" class="logbtn" href="/registo">
         sign in

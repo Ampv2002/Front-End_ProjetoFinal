@@ -6,11 +6,11 @@
             <div class="card-form__inner">
                 <h1 class="tit">Registar</h1>
                 <div class="card-input">
-                <label for="cardNumber" class="card-input__label">email</label>
+                <label for="cardNumber" class="card-input__label">E-mail</label>
                 <input type="text" id="cardNumber" class="card-input__input" v-model="email" autocomplete="off">
                 </div>
                 <div class="card-input">
-                <label for="cardName" class="card-input__label">pass</label>
+                <label for="cardName" class="card-input__label">Password</label>
                 <input type="text" id="cardName" class="card-input__input" v-model="password" autocomplete="off">
                 <p class="message">Already registered? <a href="/registo" class="create">Sign In</a></p>
                 </div>
@@ -69,11 +69,13 @@ export default ({
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
 body .wrapper{
-    background-color: #76b852 !important; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    /* background-color: #76b852 !important; /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(right, #76b852, #8DC26F);
     background: -moz-linear-gradient(right, #76b852, #8DC26F);
     background: -o-linear-gradient(right, #76b852, #8DC26F);
-    background: linear-gradient(to left, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F); */
+    background-image: url('../assets/bkg1.jpg') ;
+    background-position-y: -200px;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;   
