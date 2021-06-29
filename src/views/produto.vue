@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="fundo">
   <v-container>
         <div class="row">
         <!-- Lista favoritos -->
@@ -96,6 +96,10 @@
 $accent-color: #e7e7e7;
 $brand-color:#fe4141;
 $dark-color: #1e1b26;
+
+body .fundo {
+background-image: url('../assets/bkg2.jpg');
+}
 
 .container{
   width:100%;

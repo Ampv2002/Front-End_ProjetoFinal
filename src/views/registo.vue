@@ -19,6 +19,18 @@
                 <button class="card-form__button" @click="loginUser()">
                 Submit
                 </button>
+                <div v-if="mostrar"> 
+                 <v-snackbar
+                    :timeout="-1"
+                    :value="true"
+                    absolute
+                    left
+                    shaped
+                    top
+                    >
+                    Erro ao autenticar.
+                 </v-snackbar>
+                </div>
             </div>
         </div>
 

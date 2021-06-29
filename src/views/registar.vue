@@ -19,7 +19,20 @@
                 <button class="card-form__button" @click="createUser()">
                 Submit
                 </button>
+                
             </div>
+            <div v-if="mostrar"> 
+                 <v-snackbar
+                    :timeout="-1"
+                    :value="true"
+                    absolute
+                    left
+                    shaped
+                    top
+                    >
+                    Erro ao autenticar.
+                 </v-snackbar>
+                </div>
         </div>
 
     </div>
@@ -34,7 +47,7 @@ import firebase from "firebase";
 export default ({
     data() {
         return {
-    email: '',
+      email: '',
       password: '',
       mostrar: false,
         }
@@ -74,7 +87,7 @@ body .wrapper{
     background: -moz-linear-gradient(right, #76b852, #8DC26F);
     background: -o-linear-gradient(right, #76b852, #8DC26F);
     background: linear-gradient(to left, #76b852, #8DC26F); */
-    background-image: url('../assets/bkg1.jpg') ;
+    background-image: url('../assets/bkg1.jpg');
     background-position-y: -200px;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -2,17 +2,17 @@
   <v-app>
 
       
-    <v-app-bar dark prominent dense >
+    <v-app-bar  prominent dense class="indigo lighten-1">
       
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="nav"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="nav white--text" ></v-app-bar-nav-icon>
       
       <v-toolbar-title >
         
       </v-toolbar-title>
         
-      <v-spacer  class="titulo text-center center"> <v-btn elevation="0"  href="/produto"><h1>Book Api</h1></v-btn> </v-spacer>
+      <v-spacer  class="titulo text-center center "> <v-btn elevation="0"  href="/produto" color="indigo lighten-1" class="white--text"><h1>Book Api</h1></v-btn> </v-spacer>
 
-      <v-btn elevation="0" class="logbtn" href="/registo">
+      <v-btn elevation="0" color="indigo lighten-1" class="logbtn white--text" href="/registo">
         sign in
         <!-- <v-icon>mdi-magnify</v-icon> -->
       </v-btn>
@@ -42,12 +42,12 @@
       </v-list>
     </v-navigation-drawer>
     <router-view> </router-view>
-    <v-footer color="primary lighten-1" padless >
+    <v-footer color="indigo lighten-1" padless >
       <v-row justify="center" no-gutters class="text-center center">
         <v-btn v-for="link in links" :key="link[0]" :href="link[1]" color="white" text rounded class="my-2" :target="link[2]">
-          {{ link[0] }}
+          <v-icon>{{link[0]}}</v-icon>
         </v-btn>
-        <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
+        <v-col class="black py-2 text-center white--text" cols="12">
           {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
         </v-col>
       </v-row>
@@ -92,9 +92,9 @@ export default {
     drawer: false,
     group: null,
       links: [
-        ['Home', '/', '_self'],
-        ['Contact Us', 'mailto:afonsomiguelvieira@gmail.com','_blank'],
-        ['Twitter', 'https://twitter.com/ampv2016', '_blank'],
+        ['mdi-home', '/', '_self'],
+        ['mdi-email', 'mailto:afonsomiguelvieira@gmail.com','_blank'],
+        ['mdi-twitter', 'https://twitter.com/ampv2016', '_blank'],
       ],
   }),
   watch: {
