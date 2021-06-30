@@ -25,8 +25,8 @@
 
                 <div v-if="favoritos.length >0">
                   <h3><b>Favoritos</b></h3>
-                  <div v-for="(fav, index) in favoritos" :key="index">
-                      {{fav.Titulo}} <v-icon x-small @click="removeFav(index)">mdi-close-circle-outline</v-icon>
+                  <div class="favoritos" v-for="(fav, index) in favoritos" :key="index">
+                      {{fav.Titulo}} <v-icon color="white" x-small @click="removeFav(index)">mdi-close-circle-outline</v-icon>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@
                     </div>
                   </div>
                     <div class="col2"><button @click='btnClick(item.Goodreads)' target="_blank" ><div class="watch-btn"><h3> GOODREADS </h3></div></button></div>
-                    <div class="col2"><div class="favorite-button"><v-btn @click="favorito(item)">Favorito</v-btn></div></div>
+                    <div class="col2"><div class="favorite-button"><v-btn @click='favorito(item)' class="mx-2" fab dark small color="pink"><v-icon dark>mdi-heart</v-icon></v-btn></div></div>
                 </div>
               </div>
           </div>
@@ -98,7 +98,15 @@ $brand-color:#fe4141;
 $dark-color: #1e1b26;
 
 body .fundo {
-background-image: url('../assets/bkg2.jpg');
+background-image: url('../assets/bkg4.png');
+background-size: contain;
+background-repeat: repeat-y;
+
+}
+
+.favoritos{
+  color: white;
+  font-weight: 900;
 }
 
 .container{
@@ -182,7 +190,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   padding:4px;
   width: 140px;
   position: absolute;
-  right:   -21px;
+  right:   -79px;
   bottom:  -38px;
   float: left
 }

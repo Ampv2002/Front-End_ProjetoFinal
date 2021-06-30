@@ -10,7 +10,7 @@
         
       </v-toolbar-title>
         
-      <v-spacer  class="titulo text-center center "> <v-btn elevation="0"  href="/produto" color="indigo lighten-1" class="white--text"><h1>Book Api</h1></v-btn> </v-spacer>
+      <v-spacer  class="titulo text-center center "><v-btn :ripple="false" class="api-btn white--text" style="padding-top: 18px" height="0" width="0" elevation="0"  href="/produto" color="indigo lighten-1" ><img height="80" src="@/assets/library.png"/></v-btn></v-spacer>
 
       <v-btn elevation="0" color="indigo lighten-1" class="logbtn white--text" href="/registo">
         sign in
@@ -60,6 +60,8 @@
 </style>
 
 <style scopped>
+
+
 .vue-footer{
   display: flex;
   justify-content: center;
